@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div id="page1">
+        <div id="nav">
+            <img src="https://heartitout.in/home-new/assets/images/Hio-header-images/heart-it-out-logo.svg" alt="logo">
+        </div>
+        <div id="title1">
+            <h1>SECTION I</h1>
+        </div>
+        <div id="cont1">
+            <div id="que1">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+            <input name="ans1" type="radio">Lorem ipsum dolor. <br><br>
+            <input name="ans1" type="radio">Lorem ipsum dolor. <br><br>
+            <input name="ans1" type="radio">Lorem ipsum dolor. <br><br>
+            <input name="ans1" type="radio">Lorem ipsum dolor. <br><br>
+            </div>
+            <div id="dropdown">
+                <label for="cars">Choose a Category </label>
+                    <select name="cars" id="cars">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Children">Children</option>
+                    <option value="Other">Other</option>
+                    </select>
+            </div>
+
+            <div id="que2">
+                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing.</h3>
+            <input name="ans2" type="checkbox">Lorem ipsum dolor. <br><br>
+            <input name="ans2" type="checkbox">Lorem ipsum dolor. <br><br>
+            <input name="ans2" type="checkbox">Lorem ipsum dolor. <br><br>
+            <input name="ans2" type="checkbox">Lorem ipsum dolor. <br><br>
+            </div>
+            <button id="submitBtn">Submit</button>
+        </div>
+    </div>
+    <div id="page2">
+        <div id="title2">
+            <h1>SECTION II</h1>
+        </div>
+        <div id="app">
+            <button class="btn" id="btn-cars">Cars<span class="dropdown-arrow"><i class="ri-arrow-down-s-line"></i></span></button>
+            <div id="content-cars" class="accordion-content" style="display: none;"></div>
+            
+            <button class="btn" id="btn-trucks">Trucks<span class="dropdown-arrow"><i class="ri-arrow-down-s-line"></i></span></button>
+            <div id="content-trucks" class="accordion-content" style="display: none;"></div>
+            
+            <button class="btn" id="btn-motorcycles">Motorcycles<span class="dropdown-arrow"><i class="ri-arrow-down-s-line"></i></span></button>
+            <div id="content-motorcycles" class="accordion-content" style="display: none;"></div>
+            
+            <button class="btn" id="btn-racing">Racing<span class="dropdown-arrow"><i class="ri-arrow-down-s-line"></i></span></button>
+            <div id="content-racing" class="accordion-content" style="display: none;"></div>
+        </div>
+        
+        
+    </div>
+    <div id="page3">
+        <div id="title3">
+            <h1>SECTION III</h1>
+        </div>
+        <div class="slider-container">
+            
+            
+            <div class="slider">
+                <button class="prev"><i class="ri-arrow-left-s-line"></i></button>
+                
+                <div class="slider-content">
+                    <div class="slide active">
+                        <blockquote>
+                            <q>Lorem Ipsum</q>
+                            <p>“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.”</p>
+                        </blockquote>
+                    </div>
+                    <div class="slide">
+                        <blockquote>
+                            <q>Lorem Ipsum</q>
+                            <p>“Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.”</p>
+                        </blockquote>
+                    </div>
+                    <div class="slide">
+                        <blockquote>
+                            <q>Lorem Ipsum</q>
+                            <p>“But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.”</p>
+                        </blockquote>
+                    </div>
+                    <div class="slide">
+                        <blockquote>
+                            <q>Lorem Ipsum</q>
+                            <p>“Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.”</p>
+                        </blockquote>
+                    </div>
+                    <div class="slide">
+                        <blockquote>
+                            <q>Lorem Ipsum</q>
+                            <p>“But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.”</p>
+                        </blockquote>
+                    </div>
+                </div>
+                
+                <button class="next"><i class="ri-arrow-right-s-line"></i></button>
+            </div>
+        </div>
+        <div class="pagination">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        
+        <div id="sliderbtn">
+            <button class="slider-button">Slider Button</button>
+        </div>
+        <footer>
+            <img src="https://heartitout.in/home-new/assets/images/Hio-header-images/heart-it-out-logo.svg" alt="logo">
+        </footer>
+        
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
