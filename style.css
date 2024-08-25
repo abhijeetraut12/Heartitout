@@ -1,0 +1,717 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Style for labels when input is checked */
+input[type="radio"]:checked + label{
+    color: teal;
+    font-weight: bold;
+}
+
+/* Default style for labels */
+label {
+    color: #000000;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Ensure that the labels are correctly adjacent to inputs */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+
+#page1{
+    /* background-color: #f8f9fa; */
+    height: 100vh;
+}
+#nav{
+    height: 8.5vh;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(34, 34, 34, 0.2), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title1{
+    margin-top: 2vh;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title1 h1{
+    color :teal;
+    font-weight: 600;
+}
+#cont1{
+    width: 100%;
+    height: 79vh;
+    margin-top: 2.5vh;
+    /* background-color: green; */
+    position: relative;
+}
+#que1{
+    width: 100%;
+    height: 23vh;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 2vh 10vh;
+}
+#que1 input.active{
+    color: teal;;
+}
+#que1 h3{
+    color :black;
+    margin-bottom: 2vh;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+
+#dropdown{
+    /* background-color: blue; */
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10vh;
+    
+}
+#dropdown select{
+    width: 90%;
+    padding: 1vh;
+    color: teal;
+    border: .3px solid #9a9a9a;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1vh;
+}
+#dropdown label{
+    color :black;
+    margin-bottom: 1vh;
+    margin-top: 5vh;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+#que2{
+    width: 100%;
+    height: 23vh;
+    margin-top: 4vh;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 2vh 10vh;
+}
+#que2 h3{
+    color :black;
+    margin-bottom: 2vh;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+#page1 button{
+    width: 20%;
+    height: 6vh;
+    margin-left: 40%;
+    margin-top: 5vh;
+    color: white;
+    background-color: teal;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#page2{
+    /* background-color: #111; */
+    padding-bottom : 2vh;
+}
+#title2{
+    margin-top: 2vh;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title2 h1{
+    color :rgb(3, 72, 72);
+    font-weight: 500;
+}
+#app {
+    padding: 20px 0;
+}
+
+#app button {
+    margin-bottom: 1.5vh;
+    margin-left: 15%;
+    width: 70%;
+    height: 6vh;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    border: none;
+    text-align:center;
+    font-size: 2vh;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+/* Initial arrow styling */
+.dropdown-arrow {
+    display: inline-block;
+    margin-left: 90%;
+    transition: transform 0.3s ease;
+}
+i{
+    color: teal;
+}
+
+/* Inverted arrow */
+.dropdown-arrow.inverted {
+    transform: rotate(180deg);
+}
+
+
+button:hover {
+    background-color: #ddd;
+}
+
+.accordion-content {
+    padding: 20px 0;
+    background-color: #fff;
+    margin-bottom: 1.5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch; /* Ensure all cards stretch to the same height */
+    flex-wrap: wrap;
+    gap: 20px; /* Gap between cards */
+}
+
+.card-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-type {
+    font-size: 16px;
+    color: #0a4369;
+    font-weight: bold;
+    margin-bottom: 1vw;
+    text-align: center;
+}
+
+.card {
+    width: 100%; /* Make the card take the full width of its container */
+    padding: 0 1vh;
+    padding-top: 1vh;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
+    flex-grow: 1; /* Allow the card to grow and stretch to the same height */
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.card .price {
+    font-size: 24px;
+    color: #ff5722;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.card a {
+    display: block;
+    width: 120%;
+    margin-left: -10%;
+    margin-top: 15px;
+    padding: 12px 0;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Specific card styles based on content (you can adjust these) */
+.card.type-reality {
+    border-top: 5px solid #4caf50;
+    border: 2px solid #4caf50;
+}
+
+.card.type-reality a {
+    background-color: #4caf50;
+}
+
+.card.type-scripted {
+    border-top: 5px solid #ff9800;
+    border: 2px solid #ff9800;
+}
+
+.card.type-scripted a {
+    background-color: #ff9800;
+}
+
+.card.type-documentary {
+    border-top: 5px solid #3f51b5;
+    border: 2px solid #3f51b5;
+}
+
+.card.type-documentary a {
+    background-color: #3f51b5;
+}
+
+.card.type-sports {
+    border-top: 5px solid #e91e63;
+    border: 2px solid #e91e63;
+}
+
+.card.type-sports a {
+    background-color: #e91e63;
+}
+
+.card.type-animation {
+    border-top: 5px solid #9c27b0;
+    border: 2px solid #9c27b0;
+}
+
+.card.type-animation a {
+    background-color: #9c27b0;
+}
+
+#page3{
+    width: 100%;
+    position: relative;
+}
+#title3{
+    margin-top: 2vh;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title3 h1{
+    color :#0a4369;
+    font-weight: 500;
+}
+
+
+.slider-container {
+    text-align: center;
+    justify-content: center;
+    margin-left: 20%;
+    margin-top: 1vh;
+    width: 60%;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 24px;
+    color: #0a4369;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #ffc107;
+    margin: 8px auto 0;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.slider-content {
+    display: flex;
+    overflow: hidden;
+    max-width: 600px;
+    height: 22vh;
+    position: relative;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    display: none;
+}
+
+.slide.active {
+    opacity: 1;
+    display: block;
+}
+
+.slide blockquote {
+    position: relative;
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+    padding: 10px 20px;
+}
+
+.slide blockquote q {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.slider button {
+    background-color: #0a4369;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slider button.prev {
+    left: -7vw;  
+    width: 3vw;  
+    height: 3vw; 
+}
+
+.slider button.next {
+    right: -7vw; 
+    width: 3vw;  
+    height: 3vw; 
+}
+.slider button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 2.5vh;
+
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #0a4369;
+}
+#sliderbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+}
+.slider-button {
+    width: 10vw;
+    padding: 10px 20px;
+    background-color: #0a4369;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-button:hover {
+    background-color: #0056b3;
+}
+footer{
+    width: 100%;
+    height: 40vh;
+    background-color: #0a4369;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media (max-width: 800px){
+    
+.card-container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+ 
+.card a {
+        display: block;
+        width: 120%;
+        margin-left: -10%;
+        margin-top: 15px;
+        padding: 12px 0;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+}
+.slider-button{
+    width: 40%;
+} 
+   
+
+}
+@media (max-width:485px){
+    #nav{
+        height: 8.5vh;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(34, 34, 34, 0.2), 0 6px 6px rgba(0, 0, 0, 0.23);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #title1{
+        margin-top: 2vh;
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #title1 h1{
+        color :teal;
+        font-weight: 600;
+    }
+    #cont1{
+        width: 100%;
+        height: 79vh;
+        margin-top: 2vh;
+        /* background-color: green; */
+        position: relative;
+    }
+    #que1{
+        width: 100%;
+        height: 29vh;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 2vh 10vh;
+    }
+    #que1 input.active{
+        color: teal;;
+    }
+    #que1 h3{
+        color :black;
+        margin-bottom: 2vh;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    
+    
+    #dropdown{
+        /* background-color: blue; */
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10vh;
+        
+    }
+    #dropdown select{
+        width: 90%;
+        padding: 1vh;
+        color: teal;
+        border: .3px solid #9a9a9a;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 1vh;
+    }
+    #dropdown label{
+        color :black;
+        margin-bottom: 1vh;
+        margin-top: 5vh;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    #que2{
+        width: 100%;
+        height: 23vh;
+        margin-top: 4vh;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 2vh 10vh;
+    }
+    #que2 h3{
+        color :black;
+        margin-bottom: 2vh;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    #page1 button{
+        width: 20%;
+        height: 6vh;
+        margin-left: 40%;
+        margin-top: 8vh;
+        color: white;
+        background-color: teal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    
+}
+@media (max-width:400px){
+    #nav{
+        height: 6.5vh;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(34, 34, 34, 0.2), 0 6px 6px rgba(0, 0, 0, 0.23);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #title1{
+        margin-top: 2vh;
+        width: 100%;
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #title1 h1{
+        color :teal;
+        font-weight: 600;
+    }
+    #cont1{
+        width: 100%;
+        height: 90vh;
+        margin-top: 2vh;
+        /* background-color: green; */
+        position: relative;
+    }
+    #que1{
+        width: 100%;
+        height: 30vh;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 2vh;
+    }
+    #que1 input.active{
+        color: teal;;
+    }
+    #que1 h3{
+        color :black;
+        margin-bottom: 2vh;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    
+    
+    #dropdown{
+        /* background-color: blue; */
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2vh;
+        
+    }
+    #dropdown select{
+        width: 90%;
+        padding: 1vh;
+        color: teal;
+        border: .3px solid #9a9a9a;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 1vh;
+    }
+    #dropdown label{
+        color :black;
+        margin-bottom: 1vh;
+        margin-top: 5vh;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    #que2{
+        width: 100%;
+        height: 23vh;
+        margin-top: 4vh;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 2vh;
+    }
+    #que2 h3{
+        color :black;
+        margin-bottom: 2vh;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    #page1 button{
+        width: 20%;
+        height: 6vh;
+        margin-left: 40%;
+        margin-top: 8vh;
+        color: white;
+        background-color: teal;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    
+}
